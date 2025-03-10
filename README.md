@@ -1,58 +1,74 @@
-# AgenciaMarketing Crew
-Esse é meu teste para criação de uma agencia de publicidade com CREW.io
-Segue abaixo o passo a passo para instalação. Está 100% funcional.
 
 
-## Installation
+Agência de Marketing Crew
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [Poetry](https://python-poetry.org/) for dependency management and package handling, offering a seamless setup and execution experience.
+Este é um projeto experimental para a criação de uma agência de publicidade utilizando CREW.io. O projeto está 100% funcional e pronto para uso.
 
-First, if you haven't already, install Poetry:
+Instalação
 
-```bash
+Certifique-se de ter o Python >= 3.10 e <= 3.13 instalado no seu sistema. Este projeto utiliza o Poetry para gerenciamento de dependências e pacotes, proporcionando uma experiência de configuração e execução simplificada.
+
+Passo 1: Instalar o Poetry
+
+Caso ainda não tenha o Poetry instalado, execute o seguinte comando:
+
 pip install poetry
-```
 
-Next, navigate to your project directory and install the dependencies:
+Passo 2: Instalar dependências do projeto
 
-1. First lock the dependencies and then install them:
-```bash
+1. No diretório raiz do projeto, primeiro trave as dependências e depois instale-as:
+
 poetry lock
-```
-```bash
+
 poetry install
-```
-### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
 
-- Modify `src/agencia_marketing/config/agents.yaml` to define your agents
-- Modify `src/agencia_marketing/config/tasks.yaml` to define your tasks
-- Modify `src/agencia_marketing/crew.py` to add your own logic, tools and specific args
-- Modify `src/agencia_marketing/main.py` to add custom inputs for your agents and tasks
 
-## Running the Project
+Configuração
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+Para personalizar sua agência de marketing baseada em CrewAI, siga os passos abaixo:
 
-```bash
+1. Adicione sua chave da OpenAI ao arquivo .env:
+
+OPENAI_API_KEY=your_api_key_here
+
+
+2. Configure os agentes editando o arquivo:
+
+src/agencia_marketing/config/agents.yaml
+
+
+3. Defina as tarefas no arquivo:
+
+src/agencia_marketing/config/tasks.yaml
+
+
+4. Personalize a lógica, ferramentas e argumentos no arquivo:
+
+src/agencia_marketing/crew.py
+
+
+5. Adapte as entradas para seus agentes e tarefas no arquivo:
+
+src/agencia_marketing/main.py
+
+
+
+Executando o Projeto
+
+Para iniciar sua equipe de agentes de IA e começar a execução das tarefas, utilize o comando abaixo no diretório raiz do projeto:
+
 poetry run agencia_marketing
-```
 
-This command initializes the agencia_marketing Crew, assembling the agents and assigning them tasks as defined in your configuration.
+Este comando inicializa a Agência de Marketing Crew, reunindo os agentes e atribuindo as tarefas conforme definido na configuração.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+> Por padrão, o projeto gera um arquivo report.md na pasta raiz, contendo um relatório sobre pesquisa de Modelos de Linguagem (LLMs).
 
-## Understanding Your Crew
 
-The agencia_marketing Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
-## Support
+Estrutura da Agência de Marketing Crew
 
-For support, questions, or feedback regarding the AgenciaMarketing Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+A Agência de Marketing Crew é composta por vários agentes de IA, cada um com funções, objetivos e ferramentas específicas. Eles trabalham de forma colaborativa em uma série de tarefas definidas no arquivo config/tasks.yaml, utilizando suas habilidades combinadas para alcançar objetivos complexos.
 
-Let's create wonders together with the power and simplicity of crewAI.
+O arquivo config/agents.yaml define as configurações e capacidades de cada agente da equipe.
+
